@@ -1,6 +1,6 @@
 const request = require('supertest');
-const app = require('../app');
-const move = require('./move');
+const app = require('../../app');
+const move = require('../../services/move');
 
 describe('get move', () => {
     const agent = request.agent(app);

@@ -1,4 +1,4 @@
-const move = require('./move');
+const move = require('../../services/move');
 
 describe('get move', () => {
     
