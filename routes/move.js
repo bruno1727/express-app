@@ -1,13 +1,12 @@
+var move = require( '../services/move');
+
 var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
 router.post('/', function(req, res, next) {
-  req.body.forEach((e, i) => {
-    if(!e){
-      res.send(JSON.stringify(i));
-    }
-  });
+  
+  res.send(JSON.stringify(move.getMove(req.body)));
 });
 
 module.exports = router;
