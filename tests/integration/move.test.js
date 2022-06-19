@@ -6,7 +6,7 @@ describe('get move', () => {
     const agent = request.agent(app);
 
     test('should run with success', async () => {
-        await agent.post('/move').send(Array(9).fill(null)).expect('Content-Type', /json/).expect(200);
+        await agent.post('/move/computer').send(Array(9).fill(null)).expect(200).expect('Content-Type', /json/);
     });
 });
 
